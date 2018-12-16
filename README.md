@@ -6,6 +6,10 @@ Soon.
 
 ### Changelog
 
+#### v0.3 > Services area on all screens & fix
+- Fix landing image margin to 0 on bigger resolutions.
+- Define main structure for services area.
+
 #### v0.2 > Landing area on big screens
 - Define landing area on lg and xl screens.
 - Add several dummy landing areas on other screen sizes.

@@ -11,6 +11,8 @@
   --color-01: #03CEA4;
   --color-02: #01A382;
   --color-03: #cfcfcf;
+  --color-04: #404040;
+  --color-transp-04: rgba(0,0,0,0.75);
   --color-transp-01: rgba(3, 206, 164, 0.45);
   /* FX VARIABLES */
   --fx-01: all 450ms ease-in-out;
@@ -32,6 +34,7 @@ body{
   overflow-x: hidden;
   font-family: var(--font-p);
   color: var(--color-t);
+  background-color: var(--color-04);
 }
 /* TYPOGRAPHY
 ####################################  */
@@ -39,24 +42,25 @@ p, li, span{
   font-family: var(--font-p);
   text-align: justify;
   text-justify: auto;
+  color: var(--color-01);
 }
 h1, h2, h3, h4, h5{
   font-family: var(--font-h);
 }
 h1{
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 h2{
-  font-size: 2.1;
+  font-size: 1.8;
 }
 h3{
-  font-size: 1.7;
-}
-h4{
   font-size: 1.4;
 }
-h3{
+h4{
   font-size: 1.2;
+}
+h5{
+  font-size: 1.1;
 }
 .special-font-01{
   font-family: var(--font-special-01)!important;
@@ -74,6 +78,7 @@ h3{
 /* Image Handlers */
 #body_landing .image_landing{
   min-height: 100%;
+  min-width: 100%;
 }
 #body_landing .image_landing_container{
   height: 100vh;
@@ -94,16 +99,18 @@ h3{
   color: var(--color-01);
   margin-left: 0;
 }
-#body_landing .header_caption{
-  font-size: 1.1em;
-  margin-left: 0.5%;
-  color: var(--color-01);
-}
 #body_landing h3{
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1.6em;
-  /* font-family: var(--font-special-01); */
+  color: var(--color-01);
+}
+#body_landing p{
+  color: var(--color-03);
+}
+#body_landing .header_caption{
+  font-size: 1.1em;
+  margin-left: 0.5%;
   color: var(--color-01);
 }
 /* Overlay caption content  */
@@ -173,6 +180,33 @@ h3{
   background-color: rgba(0,0,0,0.75);
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==");
 }
+/* SERVICES AREA PARAMETERS
+####################################  */
+#body_services{
+  min-height: 100vh;
+}
+#body_services .body_services_container_header{
+  padding-top: 12.5vh;
+}
+#body_services .body_services_container_content{
+  padding-top: 2.5vh;
+  min-height: 40vh;
+}
+#body_services .col_services{
+  padding: 1em;
+}
+#body_services p{
+  text-align: center;
+  color: var(--color-03);
+}
+#body_services h1,h2{
+  color: var(--color-01);
+}
+#body_services h2{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding-top: 2vh;
+}
 /* BUTTON DESIGN HANDLER
 ####################################  */
 .local_nav_icon{
@@ -192,6 +226,14 @@ h3{
 .btn-info:hover, btn-info:active{
   background-color: var(--color-02);
   border-color: var(--color-02);
+}
+/* BORDER DESIGN HANDLER
+####################################  */
+.border{
+  border-radius: 0.25em;
+}
+.border-primary{
+  border-color: var(--color-02)!important;
 }
 /* SEPARATOR DESIGN HANDLER
 ####################################  */
