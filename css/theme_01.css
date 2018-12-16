@@ -1,0 +1,52 @@
+/* ENVIRONMENT VARIABLES
+####################################  */
+:root{
+
+}
+/* GENERAL PARAMETERS
+####################################  */
+* {
+  box-sizing: border-box;
+}
+html{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+body{
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* GENERAL CONTAINER ADAPTATION
+####################################  */
+
+/* LANDING AREA PARAMETERS
+####################################  */
+#body_landing{
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+/* Image Handlers */
+#body_landing .image_landing{
+  min-height: 100%;
+}
+#body_landing .image_landing_container{
+  height: 100vh;
+  overflow: hidden;
+}
+/* Overlay Handler  */
+#body_landing > .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.75);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==");
+}
+/* >>
+####################################  */
