@@ -6,8 +6,16 @@ Soon.
 
 ### Changelog
 
+#### v0.4 > Landing area on medium screens
+- Add landing area schematics for medium sized screens.
+- Adapt text content and column sizing to fit new ratio and resolutions.
+- Add local nav to remaining breaking points and new areas.
+- Fix local nav to the bottom of placed container.
+- Convert positioning of section containers to relative.
+- Add minimal margin on services wrapping.
+
 #### v0.3 > Services area on all screens & fix
-- Fix landing image margin to 0 on bigger resolutions.
+- Fix landing image width to 100vw as minimum.
 - Define main structure for services area.
 
 #### v0.2 > Landing area on big screens

@@ -144,7 +144,10 @@ h5{
 }
 /* Local nav Handler  */
 #body_landing .local_nav_row{
+  position: absolute;
+  bottom: 2vh;
   padding-top: 3vh;
+  width: 100vw;
   /* background-color: blue; */
 }
 #body_landing .local_nav{
@@ -183,13 +186,14 @@ h5{
 /* SERVICES AREA PARAMETERS
 ####################################  */
 #body_services{
+  position: relative;
   min-height: 100vh;
 }
 #body_services .body_services_container_header{
   padding-top: 12.5vh;
 }
 #body_services .body_services_container_content{
-  padding-top: 2.5vh;
+  padding: 2.5vh 1.5vw 1vh 1.5vw;
   min-height: 40vh;
 }
 #body_services .col_services{
@@ -206,6 +210,31 @@ h5{
   font-size: 1.2em;
   text-transform: uppercase;
   padding-top: 2vh;
+}
+#body_services h1{
+  font-size: 2.0em;
+}
+
+/* Local nav Handler  */
+.local_nav_row{
+  position: absolute;
+  bottom: 2vh;
+  padding-top: 3vh;
+  width: 100vw;
+  /* background-color: blue; */
+}
+.local_nav{
+  /* background-color: red; */
+}
+.local_nav_icon{
+  font-size: 1.2em;
+  height: 1.8em;
+  width: 1.8em;
+  padding: 5px;
+  border-style: solid;
+  border-width: 0.1em;
+  border-radius: 50%;
+  color: var(--color-01);
 }
 /* BUTTON DESIGN HANDLER
 ####################################  */
@@ -230,7 +259,7 @@ h5{
 /* BORDER DESIGN HANDLER
 ####################################  */
 .border{
-  border-radius: 0.25em;
+  border-radius: 0.11em;
 }
 .border-primary{
   border-color: var(--color-02)!important;
