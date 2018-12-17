@@ -272,6 +272,27 @@ h5{
 	border: 0;
 }
 /* TEMPORARY STUFF */
-.dummy_container{
-  min-height: 100vh;
+#dummy{
+  position: relative;
+  min-height:100vh;
+  /* background-color: blue; */
+}
+#dummy > .header{
+  padding-top: 12.5vh;
+  color: var(--color-01);
+}
+#dummy > .video_container{
+  height: 80vh;
+  overflow: hidden;
+}
+#dummy .embed-responsive-item{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#dummy iframe{
+  max-height: 24em;
+  max-width: 43em;
+
 }
