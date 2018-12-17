@@ -6,6 +6,18 @@ Soon.
 
 ### Changelog
 
+#### v0.6 > Commit for exercise 2.2
+- Add contact form.
+- Label and assign selectors to form elements.
+- Validate form input based on data type.
+- Make form responsive on 2 different breakpoints.
+- Add name var attributes to inputs to have them ready for backend.
+- Add non required phone field.
+- Validate phone field according to german phone pattern.
+- Move phone field to the right side of the name.
+- Button styled according to personal theme.
+
+
 #### v0.5 > Commit for exercise 2.1
 - Add footer with copyright and signature.
 - Add semantic element as navigation bar.

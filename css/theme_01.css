@@ -8,6 +8,7 @@
   --font-special-01: 'Cabin Sketch', cursive;
   /* COLOR VARIABLES  */
   --color-t: #efefef;
+  --color-00: rgba(0,0,0,0);
   --color-01: #03CEA4;
   --color-02: #01A382;
   --color-03: #cfcfcf;
@@ -42,7 +43,7 @@ p, li, span{
   font-family: var(--font-p);
   text-align: justify;
   text-justify: auto;
-  color: var(--color-01);
+  color: var(--color-03);
 }
 h1, h2, h3, h4, h5{
   font-family: var(--font-h);
@@ -179,12 +180,13 @@ a:hover{
   width: 100%;
 }
 #body_landing .input_email::-webkit-input-placeholder{
-  color: var(--color-02);
+  color: var(--color-01);
 }
 #body_landing .input_email{
   color: var(--color-02);
   font-size: 1.1em;
   border-color: var(--color-01);
+  background-color: var(--color-00);
 }
 #body_landing .form_row{
   margin-top: 5%;
@@ -287,6 +289,57 @@ a:hover{
   border-width: 0.1em;
   border-radius: 50%;
   color: var(--color-01);
+}
+/* CONTACT AREA HANDLER
+####################################  */
+#body_contact{
+  position: relative;
+  min-height: 100vh;
+  padding-top: 12.5vh;
+}
+#body_contact > .contact_container{
+  min-height: 70vh;
+}
+#body_contact .header{
+  color: var(--color-01);
+}
+#body_contact .my_data{
+  padding: 3vh 3vw 0vh 3vw;
+}
+#body_contact .form-control{
+  /* margin: auto; */
+  /* width: 75%; */
+  background-color: var(--color-00);
+  border-color: var(--color-02);
+  color: var(--color-03);
+}
+#body_contact label{
+  color: var(--color-01);
+}
+#body_contact .alert{
+  /* background-color:  red; */
+  margin: 0;
+  padding: 0;
+  color: var(--color-01);
+  font-size: 0.6em;
+}
+#body_contact button{
+  z-index: 10000;
+}
+/* list styling  */
+#body_contact .list-group{
+  margin-top: 5%;
+}
+#body_contact .list-group-item{
+  border: 0;
+  background-color: var(--color-00);
+  padding: 1% 0 0 0;
+  font-size: 1.1em;
+  /* background-color: red; */
+}
+#body_contact .box{
+  width: 2.3em!important;
+  text-align: center;
 }
 /* FOOTER DESIGN HANDLER
 ####################################  */
