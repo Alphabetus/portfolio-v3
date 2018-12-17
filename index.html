@@ -46,14 +46,28 @@
   <!-- body > doc ####### ####### ####### ####### ####### ####### ####### -->
   <body data-spy="scroll" data-target="#menu" id="body_main">
 
+    <!-- facebook specifics -->
+    <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=345613179594716&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '345613179594716',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- /facebook specifics -->
 
     <!-- landing area ####### ####### ####### ####### ####### ####### ####### -->
     <section id="body_landing" class="container-fluid">
@@ -463,7 +477,6 @@
           Diogo &copy;2018
           <a href="https://twitter.com/gomeswebdev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" >Follow @gomeswebdev</a>
           <div class="fb-like" data-href="https://www.facebook.com/Gomes-Webdesign-373347226564743" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-          [end]
         </div>
         <!-- /col 1 -->
       </div>
