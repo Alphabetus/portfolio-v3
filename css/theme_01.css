@@ -247,7 +247,7 @@ a:hover{
 ####################################  */
 #body_footer {
   position: relative;
-  min-height: 60vh;
+  min-height: 20vh;
   font-size: 0.8em;
   color: rgba(255,255,255,0.6);
 }
@@ -265,6 +265,9 @@ a:hover{
 }
 #body_footer .twitter-follow-button , #body_footer .fb-like{
   vertical-align: middle!important;
+}
+.twitter-follow-button{
+
 }
 #body_footer > hr{
   border: 0;
