@@ -75,6 +75,51 @@ a:hover{
 /* GENERAL CONTAINER ADAPTATION
 ####################################  */
 
+/* MENU DESIGN HANDLER
+####################################  */
+#menu{
+  position: fixed;
+  z-index: 10000;
+  background-color: var(--color-04);
+  box-shadow: 0 1vh 0.5vw rgba(0,0,0,0.1);
+  /* fx */
+  transition: var(--fx-01);
+  -webkit-transition: var(--fx-01);
+}
+#menu > button{
+  border:0;
+  color: var(--color-01);
+}
+#menu > button > i{
+
+}
+#menu .navbar-brand{
+  font-size: 1.2em;
+  font-family: var(--font-h);
+  color: var(--color-01);
+  letter-spacing: 0.2em;
+}
+#menu .navbar-nav{
+  padding-right: 2.3vw;
+  /* width: 25vw; */
+}
+#menu .nav-item{
+  font-size: 1em;
+  /* fx */
+  transition: var(--fx-01);
+  -webkit-transition: var(--fx-01);
+}
+#menu .active{
+  color: var(--color-01);
+  padding-right: 2.4vw;
+}
+#menu a:hover{
+  color: var(--color-03);
+}
+#menu a:active, #menu a:focus{
+  outline: 0;
+  color: var(--color-01)!important;
+}
 /* LANDING AREA PARAMETERS
 ####################################  */
 #body_landing{

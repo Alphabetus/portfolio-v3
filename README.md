@@ -6,6 +6,12 @@ Soon.
 
 ### Changelog
 
+#### v0.5 > Commit for exercise 2.1
+- Add footer with copyright and signature.
+- Add semantic element as navigation bar.
+- Add social media plugins.
+- Add dummy responsive video.
+
 #### v0.4 > Landing area on medium screens
 - Add landing area schematics for medium sized screens.
 - Adapt text content and column sizing to fit new ratio and resolutions.
