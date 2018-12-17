@@ -6,6 +6,10 @@ Soon.
 
 ### Changelog
 
+#### v0.7 > Small fix and format.
+- Fix anchoring on contact me button on landing area.
+- Format contact info colour.
+
 #### v0.6 > Commit for exercise 2.2
 - Add contact form.
 - Label and assign selectors to form elements.
