@@ -685,7 +685,7 @@
         <div id="contact" class="col-12 col-md-6 mt-4 mt-md-auto">
 
           <!-- form -->
-          <form>
+          <form method="POST">
 
             <!-- row 1 -->
             <div class="row justify-content-center mt-2">
@@ -715,7 +715,7 @@
                     id="contact_input_phone"
                     class="form-control"
                     type="tel"
-                    pattern="[0-9]{4} [0-9]{11}"
+                    pattern="[0-9]{5,15}*$"
                     placeholder="your phone number"
                     title="Format example: 0049 xxxxxxxxxxx."
                     >

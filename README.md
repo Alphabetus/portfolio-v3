@@ -17,7 +17,6 @@ Soon.
 - Move phone field to the right side of the name.
 - Button styled according to personal theme.
 
-
 #### v0.5 > Commit for exercise 2.1
 - Add footer with copyright and signature.
 - Add semantic element as navigation bar.
