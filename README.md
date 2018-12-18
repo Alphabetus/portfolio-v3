@@ -6,6 +6,11 @@ Soon.
 
 ### Changelog
 
+#### v0.8 > Commit for exercise 2.3
+- Implement modal different modal windows.
+- Insert embed semantic tag inside of modal.
+- Implement bootstrap jQuery functions on modal.
+
 #### v0.7 > Small fix and format.
 - Fix anchoring on contact me button on landing area.
 - Format contact info colour.

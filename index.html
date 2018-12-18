@@ -842,6 +842,8 @@
 
     <!-- /contact area ####### ####### ####### ####### ####### ####### ####### -->
 
+    <!-- NOTE: Exercice 2.3 is placed below. -->
+
     <!-- dummy section to simulate next section -->
 
     <section id="dummy" class="container-fluid">
@@ -849,25 +851,53 @@
       <!-- row 1 -->
       <div class="row header justify-content-end">
         <div class="col-12 text-center text-sm-left pl-0 pl-sm-5">
-          <h1>Dummy video</h1>
+          <h1>Dummy Learn more</h1>
         </div>
       </div>
       <!-- /row 1 -->
 
       <!-- row 2 -->
-      <div class="row video_container ml-1 mr-1 ml-sm-5 mr-sm-5">
-        <div class="col-12 align-self-center">
-          <div class="embed-responsive embed-responsive-16by9 align-self-center">
-            <iframe
-              class="embed-responsive-item"
-              src="https://www.youtube.com/embed/lAkuJXGldrM"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <!-- /row 2 -->
+      <div class="row">
 
+        <!-- col 1 -->
+        <div class="col-sm">
+          <h2>Learn more</h2>
+        </div>
+        <!-- /col 1 -->
+
+        <!-- col 2 -->
+        <div class="col-sm">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_01">Modal #1</button>
+        </div>
+        <!-- /col 2 -->
+
+      </div>
+      <!-- /row 2-->
+
+      <!-- row 3 -->
+      <div class="row mt-5">
+
+        <!-- col 1 -->
+        <div class="col-sm">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_02">Modal #2</button>
+        </div>
+        <!-- /col 1 -->
+
+        <!-- col 2 -->
+        <div class="col-sm">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_03">Modal #3</button>
+        </div>
+        <!-- /col 2 -->
+
+        <!-- col 3 -->
+        <div class="col-sm">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_04">Modal #4</button>
+        </div>
+        <!-- /col 3 -->
+
+      </div>
+      <!-- /row 3 -->
 
     </section>
 
@@ -938,6 +968,142 @@
       </div>
     </section>
     <!-- /footer area ####### ####### ####### ####### ####### ####### ####### -->
+
+    <!-- modal area ####### ####### ####### ####### ####### ####### ####### -->
+    <section id="body_modal">
+
+      <!-- Modal 01 -->
+      <div id="modal_01" class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border">
+            <!-- modal title -->
+            <div class="modal-header">
+              <!-- inner col 1 -->
+              <div class="col-sm">
+                <h5 class="modal-title">Example</h5>
+              </div>
+              <!-- /inner col 1 -->
+
+              <!-- inner col 2 -->
+              <div class="col-sm">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span class="close_button" aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- /inner col 2 -->
+
+            </div>
+
+            <!-- modal content -->
+            <div class="modal-body">
+              <embed id="modal-embed" src="http://www.pdf995.com/samples/pdf.pdf">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /modal 01 -->
+
+      <!-- Modal 02 -->
+      <div id="modal_02" class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border">
+            <!-- modal title -->
+            <div class="modal-header">
+              <!-- inner col 1 -->
+              <div class="col-sm">
+                <h5 class="modal-title">Example</h5>
+              </div>
+              <!-- /inner col 1 -->
+
+              <!-- inner col 2 -->
+              <div class="col-sm">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span class="close_button" aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- /inner col 2 -->
+
+            </div>
+
+            <!-- modal content -->
+            <div class="modal-body">
+              <!-- row 2 -->
+              <div class="card-deck">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Dummy service #a</h4>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex nibh, faucibus vel viverra pharetra, congue nec erat. Quisque suscipit est at viverra feugiat.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Dummy service #b</h4>
+                    <p class="card-text">
+                       Nulla vel eros vel nulla blandit convallis ut sit amet lorem. In tincidunt risus ut mattis efficitur. Etiam tempor ultrices lacus ac tempus.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Dummy service #c</h4>
+                    <p class="card-text">
+                      Pellentesque porttitor accumsan dui ut tincidunt. Proin quam diam, accumsan vitae elementum eget, dictum a eros.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /row 2 -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /modal 02 -->
+
+
+      <!-- Modal 03 -->
+      <div id="modal_03" class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border">
+            <!-- modal title -->
+            <div class="modal-header">
+              <!-- inner col 1 -->
+              <div class="col-sm">
+                <h5 class="modal-title">Example</h5>
+              </div>
+              <!-- /inner col 1 -->
+
+              <!-- inner col 2 -->
+              <div class="col-sm">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span class="close_button" aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- /inner col 2 -->
+
+            </div>
+
+            <!-- modal content -->
+            <div class="modal-body">
+
+              <!-- responsive container -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  class="embed-responsive-item" src="https://www.youtube.com/embed/B8tQ8RUbTW8" allowfullscreen>Your browser does not support iframes. :(</iframe>
+              </div>
+              <!-- /responsive container -->
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /modal 03 -->
+
+    </section>
+    <!-- /modal area ####### ####### ####### ####### ####### ####### ####### -->
 
     <!-- script call ####### ####### ####### ####### ####### ####### ####### -->
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
