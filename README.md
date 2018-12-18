@@ -6,6 +6,9 @@ Soon.
 
 ### Changelog
 
+#### v0.10 rev3 > Switch link
+- Switch .pdf link for https example.
+
 #### v0.10 rev2 > Bug fix
 - Fix bug that opens multiple modals.
 
