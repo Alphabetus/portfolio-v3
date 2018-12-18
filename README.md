@@ -7,7 +7,7 @@ Soon.
 ### Changelog
 
 #### v0.8 > Commit for exercise 2.3
-- Implement modal different modal windows.
+- Implement several different modal windows.
 - Insert embed semantic tag inside of modal.
 - Implement bootstrap jQuery functions on modal.
 
