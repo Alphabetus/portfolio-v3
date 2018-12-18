@@ -6,6 +6,9 @@ Soon.
 
 ### Changelog
 
+#### v0.9 rev2 > Fix tooltips
+- Fix tooltips on MD breakpoint.
+
 #### v0.9 > Commit for exercise 2.4
 - Implement tooltips on landing area.
 - Implement basic jQuery.
