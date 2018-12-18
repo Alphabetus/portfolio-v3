@@ -382,6 +382,26 @@ a:hover{
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+/* TOOLTIP DESIGN HANDLER
+####################################  */
+/* NOTE:
+
+I tried a better solution than this but i simply cant find anything that solves my problem without going into jQuery which i'm really eager to learn :)
+
+Workaround > i activated html options to the tooltip on the function callTooltip.js and im using a class to style up the text.
+
+ */
+.tooltip > .tooltip-inner{
+  background-color: var(--color-03);
+  border-style: solid;
+  border-color: var(--color-01);
+  border-width: 0.12em;
+
+}
+.dark_text{
+  font-family: var(--font-p);
+  color: var(--color-02);
+}
 /* MODAL DESIGN HANDLER
 ####################################  */
 /* Example modal 1 */

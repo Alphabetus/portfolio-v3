@@ -6,6 +6,11 @@ Soon.
 
 ### Changelog
 
+#### v0.9 > Commit for exercise 2.4
+- Implement tooltips on landing area.
+- Implement basic jQuery.
+- Remove 'modal 4' button since it was not connected to any modal example.
+
 #### v0.8 > Commit for exercise 2.3
 - Implement several different modal windows.
 - Insert embed semantic tag inside of modal.
