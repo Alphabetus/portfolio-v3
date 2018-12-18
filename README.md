@@ -6,6 +6,9 @@ Soon.
 
 ### Changelog
 
+#### v0.10 rev2 > Bug fix
+- Fix bug that opens multiple modals.
+
 #### v0.10 > Commit for exercise 2.5
 - Optimise local nav class structure.
 - Remove non significant CSS data.
