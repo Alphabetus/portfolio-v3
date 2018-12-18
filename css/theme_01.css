@@ -14,6 +14,7 @@
   --color-02: #01A382;
   --color-03: #cfcfcf;
   --color-04: #404040;
+  --color-05: #3d3d3d;
   --color-transp-04: rgba(0,0,0,0.75);
   --color-transp-01: rgba(3, 206, 164, 0.45);
   /* FX VARIABLES */
@@ -82,9 +83,6 @@ a:hover{
 .special-font-01{
   font-family: var(--font-special-01)!important;
 }
-/* GENERAL CONTAINER ADAPTATION
-####################################  */
-
 /* MENU DESIGN HANDLER
 ####################################  */
 #menu{
@@ -108,7 +106,6 @@ a:hover{
 }
 #menu .navbar-nav{
   padding-right: 2.3vw;
-  /* width: 25vw; */
 }
 #menu .nav-item{
   font-size: 1em;
@@ -127,6 +124,34 @@ a:hover{
   outline: 0;
   color: var(--color-01)!important;
 }
+/* LOCAL NAV HANDLER
+####################################  */
+.local_nav_row{
+  position: relative;
+  padding-top: 3vh;
+  width: 100vw;
+  /* background-color: red; */
+}
+.local_nav_row_absolute{
+  position: absolute!important;
+  bottom: 2vh;
+  left: 0;
+  margin: 0;
+}
+.local_nav_row_z{
+  z-index: 10000;
+}
+.local_nav_icon{
+  font-size: 1.2em;
+  height: 1.8em;
+  width: 1.8em;
+  padding: 5px;
+  border-style: solid;
+  border-width: 0.1em;
+  border-radius: 50%;
+  color: var(--color-01);
+}
+
 /* LANDING AREA PARAMETERS
 ####################################  */
 #body_landing{
@@ -202,27 +227,6 @@ a:hover{
   text-transform: uppercase;
   font-weight: 300;
 }
-/* Local nav Handler  */
-#body_landing .local_nav_row{
-  position: absolute;
-  bottom: 2vh;
-  padding-top: 3vh;
-  width: 100vw;
-  /* background-color: blue; */
-}
-#body_landing .local_nav{
-  /* background-color: red; */
-}
-#body_landing .local_nav_icon{
-  font-size: 1.2em;
-  height: 1.8em;
-  width: 1.8em;
-  padding: 5px;
-  border-style: solid;
-  border-width: 0.1em;
-  border-radius: 50%;
-  color: var(--color-01);
-}
 /* Inner separator handler  */
 #body_landing .line_01{
   width: 39vw;
@@ -255,48 +259,36 @@ a:hover{
 #body_services .body_services_container_content{
   padding: 2.5vh 1.5vw 1vh 1.5vw;
   min-height: 60vh;
-  /* background-color: red; */
 }
 #body_services .card{
   background-color: var(--color-01);
   border-color: var(--color-02);
+  cursor: pointer;
+  /* fx */
+  transition: var(--fx-01);
 }
-#body_services .card-text{
-  text-align: center;
+#body_services .card:hover{
+  transform:  scale(1.01);
+  box-shadow: 0.3em 0.3em 0.65em rgba(0,0,0,0.25);
+}
+#body_services .card-title{
   color: var(--color-t-dark);
 }
-#body_services h1,h2{
-  color: var(--color-01);
-}
-#body_services h2{
-  font-size: 1.2em;
-  text-transform: uppercase;
-  padding-top: 2vh;
+#body_services .card-text{
+  text-align: justify;
+  color: var(--color-t-dark);
 }
 #body_services h1{
+  color: var(--color-01);
   font-size: 2.0em;
 }
-
-/* Local nav Handler  */
-.local_nav_row{
-  position: absolute;
-  bottom: 2vh;
-  padding-top: 3vh;
-  width: 100vw;
-  /* background-color: blue; */
+#body_services .btn-info{
+  background-color: var(--color-04);
+  border-color: var(--color-04);
 }
-.local_nav{
-  /* background-color: red; */
-}
-.local_nav_icon{
-  font-size: 1.2em;
-  height: 1.8em;
-  width: 1.8em;
-  padding: 5px;
-  border-style: solid;
-  border-width: 0.1em;
-  border-radius: 50%;
-  color: var(--color-01);
+#body_services .btn-info:hover{
+  background-color: var(--color-04);
+  border-color: var(--color-04);
 }
 /* CONTACT AREA HANDLER
 ####################################  */
@@ -315,8 +307,6 @@ a:hover{
   padding: 3vh 3vw 0vh 3vw;
 }
 #body_contact .form-control{
-  /* margin: auto; */
-  /* width: 75%; */
   background-color: var(--color-00);
   border-color: var(--color-02);
   color: var(--color-03);
@@ -325,7 +315,6 @@ a:hover{
   color: var(--color-01);
 }
 #body_contact .alert{
-  /* background-color:  red; */
   margin: 0;
   padding: 0;
   color: var(--color-01);
@@ -387,13 +376,6 @@ a:hover{
 }
 /* TOOLTIP DESIGN HANDLER
 ####################################  */
-/* NOTE:
-
-I tried a better solution than this but i simply cant find anything that solves my problem without going into jQuery which i'm really eager to learn :)
-
-Workaround > i activated html options to the tooltip on the function callTooltip.js and im using a class to style up the text.
-
- */
 .tooltip > .tooltip-inner{
   background-color: var(--color-03);
   border-style: solid;
@@ -495,11 +477,4 @@ Workaround > i activated html options to the tooltip on the function callTooltip
   position: relative;
   min-height:100vh;
   /* background-color: blue; */
-}
-#dummy > .header{
-  padding-top: 12.5vh;
-  color: var(--color-01);
-}
-#body_modal .card{
-  background-color: var(--color-transp-01);
 }

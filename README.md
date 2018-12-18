@@ -6,6 +6,10 @@ Soon.
 
 ### Changelog
 
+#### v0.10 > Commit for exercise 2.5
+- Optimise local nav class structure.
+- Remove non significant CSS data.
+
 #### v0.9 rev2 > Fix tooltips
 - Fix tooltips on MD breakpoint.
 
