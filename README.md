@@ -6,6 +6,9 @@ Soon.
 
 ### Changelog
 
+#### v0.13 > Full screen app on mobile
+- Define website as fullscreen web app.
+
 #### v0.12 > Commit for exercise 2.7 > js listeners > rev2
 - Optimise js function that handle form listeners.
 
