@@ -80,7 +80,7 @@
           ">
 
       <!-- branding -->
-      <a class="navbar-brand" href="#">&#9898; GOMES WEB</a>
+      <a class="navbar-brand" href="/">&#9898; GOMES WEB</a>
 
       <!-- button to collapse -->
       <button
@@ -120,6 +120,10 @@
     <!-- /menu area ####### ####### ####### ####### ####### ####### ####### -->
 
     <!-- landing area ####### ####### ####### ####### ####### ####### ####### -->
+<!-- NOTE:
+  In this area im assembling 1 different image for each breakpoint.
+  XS > SM > MD > LG + XL
+-->
     <section id="body_landing" class="container-fluid">
       <!-- img container -->
       <div class="row">
@@ -160,7 +164,22 @@
       <!-- landing caption container -->
       <div class="row caption_container">
 
-        <!-- big screen col -->
+<!-- NOTE:
+
+As a continuation to the logic shown above
+On the landing area body i'm dividing the content display into 3 entirely different blocks.
+1 Block is shown over XL sized screens.
+1 Block is shown below XL and avove MD sized screens.
+1 Block is shown below MD sized screens
+
+The reason i'm doing this is to be able to deliver an entirely different grid system on each breakpoint.
+
+
+BIG SCREEN DISPLAY LANDING
+
+ -->
+
+        <!-- big screen col #################################################### -->
         <div class="col-12 d-none d-xl-block caption_container_inner">
           <!-- inner row 1 > title -->
           <div class="row header justify-content-end">
@@ -224,7 +243,7 @@
                         <div class="col">
                           <input
                             type="email"
-                            class="form-control-lg input_email"
+                            class="form-control form-control-lg input_email"
                             data-toggle="tooltip"
                             data-placement="top"
                             title="<span class='dark_text'>Insert your email here and press the button get quote and get an estimate price on your new website!</span>"
@@ -279,7 +298,9 @@
         </div>
         <!-- /big screen col -->
 
-        <!-- med screen col -->
+<!-- NOTE: MED SCREEN DISPLAY LANDING -->
+
+        <!-- med screen col  ##################################################-->
         <div class="col-12 d-none d-md-block d-xl-none caption_container_inner">
 
           <!-- inner row 1 > title -->
@@ -341,7 +362,7 @@
                         <div class="col">
                           <input
                             type="email"
-                            class="form-control-lg input_email"
+                            class="form-control form-control-lg input_email"
                             data-toggle="tooltip"
                             data-placement="top"
                             title="<span class='dark_text'>Insert your email here and press the button get quote and get an estimate price on your new website!</span>"
@@ -395,20 +416,96 @@
         </div>
         <!-- /med screen col -->
 
+<!-- NOTE: BELOW MD LANDING DISPLAY -->
+
         <!-- small screen col -->
-        <div class="col-12 d-none d-sm-block d-md-none caption_container_inner">
-          <p>
-            This breakpoint does not have a landing overlay designed yet.
-          </p>
+        <div id="body_landing_small" class="col-12 d-block d-md-none caption_container_inner">
+
+          <!-- inner row 1 > title -->
+          <div class="row header justify-content-around">
+
+            <!-- col 1 -->
+            <div class="col-12">
+              <h1>Get your website today</h1>
+              <hr class="line_01">
+              <span class="header_caption">
+                Online presence is <i>essential</i> for any business.
+              </span>
+            </div>
+            <!-- /col 1-->
+
+          </div>
+          <!-- /inner row 1 > title -->
+
+          <!-- inner row 2 > presentation & form -->
+          <div class="row row-eq-height content justify-content-center">
+
+            <!-- col 1 > presentation -->
+            <div class="col-11 presentation pt-3 pb-0 m-0">
+              <p>
+                I am a full stack web developer based in Bremen, Germany.
+                <br>
+                Welcome to my portfolio.
+              </p>
+              <p>
+                My name is Diogo and as a passionated developer, my dedication and experience will help your team to achieve exactly what you are looking for.
+              </p>
+              <p>
+                Get in touch and together we will be able to find the perfect solution for your particular case. Always with personalised treatment, active customer support and affordable fees.
+              </p>
+            </div>
+            <!-- /col 1 > presentation -->
+
+            <!-- col 2 > form -->
+            <div class="col-11 mt-5 mx-0 p-0">
+
+              <!-- intro text -->
+              <div class="row justify-content-center">
+                <div class="col-11">
+
+                </div>
+              </div>
+
+
+              <!-- /intro text -->
+
+              <!-- form -->
+              <form class="" method="POST" id="quote_form" action="#">
+
+                <!-- form group -->
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control form-control-sm input_email"
+                    placeholder="insert your email"/>
+                </div>
+                <!-- /form group -->
+
+                <!-- submit button -->
+                <input
+                  type="submit"
+                  class="btn btn-info btn-sm"
+                  value="get quote"/>
+                <!-- /submit button -->
+
+              </form>
+              <!-- /form -->
+
+            </div>
+            <!-- /col 2 > form -->
+
+          </div>
+          <!-- /inner row 2 > presentation & form -->
+
         </div>
         <!-- /small screen col -->
 
         <!-- super small screen col -->
-        <div class="col-12 d-block d-sm-none caption_container_inner">
+        <!-- <div class="col-12 d-block d-sm-none caption_container_inner">
           <p>
             This breakpoint does not have a landing overlay designed yet.
           </p>
-        </div>
+        </div> -->
         <!-- /super small screen col -->
         <!-- LOCAL NAV ###################################################### -->
         <div class="row local_nav_row local_nav_row_absolute local_nav_row_z local_nav justify-content-center">
@@ -425,6 +522,13 @@
       <!-- /landing caption container -->
     </section>
     <!-- /landing area ####### ####### ####### ####### ####### ####### ####### -->
+
+<!-- NOTE:
+
+START OF THE SERVICES AREA
+
+ -->
+
     <!-- services area ####### ####### ####### ####### ####### ####### ####### -->
     <section id="body_services" class="container-fluid body_services_container">
       <!-- row 1 > header -->
@@ -453,29 +557,29 @@
                 <p class="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex nibh, faucibus vel viverra pharetra, congue nec erat. Quisque suscipit est at viverra feugiat.
                 </p>
-                <div class="col-sm text-right p-0">
+                <div class="col-sm text-right p-0 btn_read">
                   <a href="#" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal_01">Read more</a>
                 </div>
               </div>
             </div>
             <div class="card">
-              <div class="card-body" href="#" data-toggle="modal" data-target="#modal_02">
+              <div class="card-body">
                 <h4 class="card-title">Dummy service #b</h4>
                 <p class="card-text">
                    Nulla vel eros vel nulla blandit convallis ut sit amet lorem. In tincidunt risus ut mattis efficitur. Etiam tempor ultrices lacus ac tempus.
                 </p>
-                <div class="col-sm text-right p-0">
+                <div class="col-sm text-right p-0 btn_read">
                   <a href="#" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal_02">Read more</a>
                 </div>
               </div>
             </div>
             <div class="card">
-              <div class="card-body" href="#" data-toggle="modal" data-target="#modal_03">
+              <div class="card-body">
                 <h4 class="card-title">Dummy service #c</h4>
                 <p class="card-text">
                   Pellentesque porttitor accumsan dui ut tincidunt. Proin quam diam, accumsan vitae elementum eget, dictum a eros.
                 </p>
-                <div class="col-sm text-right p-0">
+                <div class="col-sm text-right p-0 btn_read">
                   <a href="#" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal_03">Read more</a>
                 </div>
               </div>
@@ -486,7 +590,6 @@
 
       </div>
       <!-- /row 3 > content -->
-
       <!-- LOCAL NAV ###################################################### -->
       <!-- LOCAL NAV > BELOW MD -->
       <div class="row local_nav_row local_nav justify-content-center d-block d-md-none">
@@ -494,7 +597,7 @@
         <!-- col 1 -->
         <div class="local_nav col-12 text-center smoothClass">
           <a href="#body_contact" class="local_nav_link">
-            <i class="local_nav_icon fas fa-angle-double-down"></i>
+            <i class="local_nav_icon fas fa-angle-double-down mb-2"></i>
           </a>
         </div>
         <!-- /col 1 -->
@@ -513,30 +616,33 @@
 
       </div>
       <!-- /LOCAL NAV ###################################################### -->
-
     </section>
     <!-- /services area ####### ####### ####### ####### ####### ####### ####### -->
+
+<!-- NOTE:
+  START OF CONTACT AREA
+-->
 
     <!-- contact area ####### ####### ####### ####### ####### ####### ####### -->
 
     <section id="body_contact" class="container-fluid">
 
       <!-- row 1 > header -->
-      <div class="row justify-content-end">
-        <div class="header col-12 text-center text-md-left pl-0 pl-sm-5">
+      <div class="row header justify-content-end">
+        <div class="col-12 text-center text-md-left pl-0 pl-sm-5">
           <h1>Contact me</h1>
         </div>
       </div>
       <!-- /row 1 > header -->
 
       <!-- row 2 -->
-      <div class="row justify-content-around contact_container">
+      <div class="row row-eq-height justify-content-around contact_container">
 
         <!-- col 0 -->
-        <div class="col-12 col-md-6 my_data mt-0 mt-md-5">
+        <div class="col-12 col-md-6 my_data">
 
           <!-- inner col 1 -->
-          <div class="col-12 col-md-12 mx-auto">
+          <div class="col-12 col-md-12 mx-auto mt-auto mt-md-5">
             <span>
               Thank you for your interest.
               <br>
@@ -744,7 +850,7 @@
                     id="contact_input_email"
                     class="form-control"
                     type="email"
-                    placeholder="Your email"
+                    placeholder="your email"
                     title="Enter your email"
                     required>
                 </div>
@@ -768,7 +874,7 @@
                     style="resize:none"
                     cols="40"
                     rows="5"
-                    placeholder="Your message"
+                    placeholder="your message"
                     minlength="50"
                     required></textarea>
                     <span class="alert">
@@ -814,7 +920,7 @@
 
       <!-- LOCAL NAV ###################################################### -->
       <!-- LOCAL NAV > BELOW MD -->
-      <div class="row local_nav_row local_nav justify-content-center d-block d-md-none">
+      <div class="row local_nav_row local_nav justify-content-center d-block d-md-none pb-2">
 
         <!-- col 1 -->
         <div class="local_nav col-12 text-center smoothClass">
@@ -841,7 +947,11 @@
 
     <!-- /contact area ####### ####### ####### ####### ####### ####### ####### -->
 
-    <!-- NOTE: Exercice 2.3 is placed below. -->
+<!-- NOTE:
+
+START OF DUMMY CONTAINER
+
+ -->
 
     <!-- dummy section to simulate next section -->
 
@@ -851,6 +961,12 @@
 
 
     <!-- /dummy container to simulate next section -->
+
+<!-- NOTE:
+
+START OF FOOTER
+
+ -->
 
     <!-- footer area ####### ####### ####### ####### ####### ####### ####### -->
     <section id="body_footer" class="footer">
@@ -917,6 +1033,12 @@
     </section>
     <!-- /footer area ####### ####### ####### ####### ####### ####### ####### -->
 
+<!-- NOTE:
+
+START OF MODAL AREA
+
+ -->
+
     <!-- modal area ####### ####### ####### ####### ####### ####### ####### -->
     <section id="body_modal">
 
@@ -944,7 +1066,7 @@
 
             <!-- modal content -->
             <div class="modal-body">
-              <embed id="modal-embed" src="https://www.antennahouse.com/XSLsample/pdf/sample-link_1.pdf">
+              <embed id="modal-embed" src="files/sample-link_1.pdf">
             </div>
           </div>
         </div>
@@ -1052,6 +1174,13 @@
 
     </section>
     <!-- /modal area ####### ####### ####### ####### ####### ####### ####### -->
+
+<!-- NOTE:
+
+START OF SCRIPTING
+At the bottom of the page to load html content before.
+ -->
+
 
     <!-- script call ####### ####### ####### ####### ####### ####### ####### -->
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>

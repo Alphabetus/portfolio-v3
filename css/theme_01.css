@@ -17,8 +17,13 @@
   --color-05: #3d3d3d;
   --color-transp-04: rgba(0,0,0,0.75);
   --color-transp-01: rgba(3, 206, 164, 0.45);
+  /* OVERLAY PATTERN VARIABLES  */
+  --pattern-01: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==");
   /* FX VARIABLES */
   --fx-01: all 450ms ease-in-out;
+  /* IMAGE VARIABLES  */
+  --background-services: url("../img/background_services.jpg");
+  --background-contact: url("../img/background_contact.jpg");
 }
 /* MEDIA PARAMETERS
 ####################################  */
@@ -46,6 +51,18 @@ body{
   color: var(--color-t);
   background-color: var(--color-04);
   width: 100vw;
+}
+.form-control:focus, .btn:focus {
+  box-shadow: 0 0 0.35em rgba(0,196,156,0.85);
+}
+.form-control{
+  background-color: rgba(1,163,130,0.03);
+  border-color: var(--color-02);
+  color: var(--color-t)!important;
+}
+.form-control:active, .form-control:focus, .form-control:focus:active {
+  border-color: var(--color-02);
+  background-color: rgba(1,163,130,0.13);
 }
 /* TYPOGRAPHY
 ####################################  */
@@ -183,6 +200,12 @@ a:hover{
   color: var(--color-01);
   margin-left: 0;
 }
+#body_landing_small h1{
+  font-size: 2em;
+}
+#body_landing_small p{
+  font-size: 0.8em;
+}
 #body_landing h3{
   text-transform: uppercase;
   font-weight: 300;
@@ -213,12 +236,6 @@ a:hover{
 #body_landing .input_email::-webkit-input-placeholder{
   color: var(--color-01);
 }
-#body_landing .input_email{
-  color: var(--color-02);
-  font-size: 1.1em;
-  border-color: var(--color-01);
-  background-color: var(--color-00);
-}
 #body_landing .form_row{
   margin-top: 5%;
 }
@@ -245,16 +262,21 @@ a:hover{
   height: 100vh;
   z-index: 100;
   background-color: rgba(0,0,0,0.75);
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==");
+  background-image: var(--pattern-01);
 }
 /* SERVICES AREA PARAMETERS
 ####################################  */
 #body_services{
+  background-image: var(--background-services);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   min-height: 100vh;
 }
 #body_services .body_services_container_header{
   padding-top: 12.5vh;
+  background-color: var(--color-04);
 }
 #body_services .body_services_container_content{
   padding: 2.5vh 1.5vw 1vh 1.5vw;
@@ -282,6 +304,12 @@ a:hover{
   color: var(--color-01);
   font-size: 2.0em;
 }
+#body_services .btn_read{
+  position: absolute;
+  width: 50%;
+  right: 4%;
+  bottom: 2%;
+}
 #body_services .btn-info{
   background-color: var(--color-04);
   border-color: var(--color-04);
@@ -295,21 +323,21 @@ a:hover{
 #body_contact{
   position: relative;
   min-height: 100vh;
-  padding-top: 12.5vh;
+  background-image: var(--background-contact);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 #body_contact > .contact_container{
-  min-height: 70vh;
+  /* min-height: 70vh; */
 }
 #body_contact .header{
+  padding-top: 12.5vh;
   color: var(--color-01);
+  background-color: var(--color-04);
 }
 #body_contact .my_data{
   padding: 3vh 3vw 0vh 3vw;
-}
-#body_contact .form-control{
-  background-color: var(--color-00);
-  border-color: var(--color-02);
-  color: var(--color-03);
 }
 #body_contact label{
   color: var(--color-01);

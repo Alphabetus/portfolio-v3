@@ -6,6 +6,13 @@ Soon.
 
 ### Changelog
 
+#### v0.11 > Landing area, backgrounds & forms
+- Add content notes to better organisation and structure.
+- Define small screened landing area.
+- Improve form design.
+- Assign modal links only to the referred buttons.
+- Move example pdf file to local location.
+
 #### v0.10 rev3 > Switch link
 - Switch .pdf link for https example.
 
