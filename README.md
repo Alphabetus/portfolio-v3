@@ -6,6 +6,11 @@ Soon.
 
 ### Changelog
 
+#### v0.12 > Commit for exercise 2.7 > js listeners
+- Add js listener to 'get quote' button on landing area.
+- Add function to handler the listeners.
+- Override css styling with jquery.
+
 #### v0.11 > Landing area, backgrounds & forms
 - Add content notes to better organisation and structure.
 - Define small screened landing area.
