@@ -6,6 +6,9 @@ Soon.
 
 ### Changelog
 
+#### v0.12 > Commit for exercise 2.7 > js listeners > rev2
+- Optimise js function that handle form listeners.
+
 #### v0.12 > Commit for exercise 2.7 > js listeners
 - Add js listener to 'get quote' button on landing area.
 - Add function to handler the listeners.

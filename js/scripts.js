@@ -57,26 +57,10 @@ $("#query_btn_submit-3").on('click',function(){
 });
 
 function quoteSubmit(form){
-  switch (form){
-    case 1:
-      var email = $("#input_email-1").val();
-      $("#input_email-1").attr("placeholder", "Check your inbox");
-      $("#input_email-1").val("");
-      $(".query_ok").text("Email sent to " + email);
-      break;
-    case 2:
-      var email = $("#input_email-2").val();
-      $("#input_email-2").attr("placeholder", "Check your inbox");
-      $("#input_email-2").val("");
-      $(".query_ok").text("Email sent to " + email);
-      break;
-    case 3:
-      var email = $("#input_email-3").val();
-      $("#input_email-3").attr("placeholder", "Check your inbox");
-      $("#input_email-3").val("");
-      $(".query_ok").text("Email sent to " + email);
-      break;
-  }
+  var email = $("#input_email-" + form).val();
+  $("#input_email-" + form).attr("placeholder", "Check your inbox");
+  $("#input_email-" + form).val("");
+  $(".query_ok").text("Email sent to " + email);
 };
 
 // BACKGROUND TINTING  #########################################################
