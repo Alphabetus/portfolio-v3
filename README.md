@@ -6,6 +6,10 @@ Soon.
 
 ### Changelog
 
+#### v0.15 > Adjust timers on hover effects
+- Adjust timer mechanics to avoid accidental opening of the overlay.
+- Cancel timer when mouse leaves.
+
 #### v0.15 > Commit for exercise 2.9 > Arrays, loops & Portfolio customisation
 - Structure portfolio area.
 - Add dummy work examples.

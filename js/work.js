@@ -44,12 +44,39 @@ function genPortfolio(){
   };
 };
 // PORTFOLIO OVERLAY         #########################################################
-// fades in overlay
+var timeoutIN;
+var timeoutOUT;
+// listener :hover overlay
 $(".portfolio_overlay").hover(function(){
-  $(this).fadeTo(750, 0.72, "swing", function(){
-  });
+  // in
+  var context = $(this);
+  startTimeout(context, 1);
+}, function (){
+  // out
+  var context = $(this);
+  clearTimeout(timeoutIN);
+  startTimeout(context, 2);
 });
-// fades out overlay
-$(".portfolio_overlay").mouseleave(function(){
-  $(this).fadeTo(750, 0, "swing");
-});
+// FUNCTIONS > OVERLAY
+// handle timeout start.
+function startTimeout(context, timer){
+  switch (timer){
+    case 1:
+      timeoutIN = setTimeout(function (){fadeOverlay(context, true)} , 650);
+      break;
+    case 2:
+      timeoutOUT = setTimeout(function (){fadeOverlay(context, false)} , 450);
+      break;
+  }
+}
+// handle fade in & out
+function fadeOverlay(context, bool){
+  if (bool){
+    // bool true = fade IN
+    context.fadeTo(750, 0.72, "swing", function(){});
+  }
+  else{
+    // bool false = fade OUT
+    context.fadeTo(750, 0.0, "swing", function(){});
+  }
+}
