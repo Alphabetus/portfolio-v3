@@ -6,6 +6,12 @@ Soon.
 
 ### Changelog
 
+#### v0.15 > Commit for exercise 2.9 > Arrays, loops & Portfolio customisation
+- Structure portfolio area.
+- Add dummy work examples.
+- Add for() loop to dynamically generate content from array.
+- Add jquery statement to dynamically change border colors.
+
 #### v0.14 > Commit for exercise 2.8 > char counting on click
 - Add character counter on contact form at the bottom.
 - Increase message box validation with javascript.
