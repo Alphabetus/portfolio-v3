@@ -854,12 +854,26 @@ START OF THE SERVICES AREA
                     cols="40"
                     rows="5"
                     placeholder="your message"
-                    minlength="50"
+                    maxlength="55"
+                    minlength="5"
                     ></textarea>
-                    <span class="alert">
-                      mandatory fields are marked with a *
-                    </span>
-                    <span id="visible-comment"></span>
+                    <!-- inner row -->
+                    <div class="row">
+                      <!-- inner cols to settle aditional info -->
+                      <div class="col-6">
+                        <span class="alert">
+                          mandatory fields are marked with a *
+                        </span>
+                      </div>
+
+                      <div class="col-6 text-right">
+                        <span id="char_limit" class="alert">
+
+                        </span>
+                      </div>
+                      <!-- /inner cols -->
+                    </div>
+                    <!-- /inner row -->
                 </div>
               </div>
               <!-- /col 1 -->
@@ -880,7 +894,7 @@ START OF THE SERVICES AREA
               <div class="col-12">
                 <!-- submit -->
                 <div class="row justify-content-center mb-2">
-                  <button type="submit" class="btn btn-info">Send</button>
+                  <button id="contact_input_button" type="submit" class="btn btn-info">Send</button>
                 </div>
                 <!-- /submit -->
               </div>

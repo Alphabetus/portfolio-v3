@@ -63,16 +63,56 @@ function quoteSubmit(form){
   $(".query_ok").text("Email sent to " + email);
 };
 
-// BACKGROUND TINTING  #########################################################
-// NOTE: note that this code overlays my css!
-$("#contact_input_message").css("background-color","#404040");
-
-// test
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
+// EXERCISE 2.8        #########################################################
+// initialize counter & vars
+var charLimitMax = 50; // defines the maximum amount of chars
+var charLimitMin = 5; // defines minimum amount of chars
+var defaultOut = "0/" + charLimitMax + " characters"; // prints default output
+var charCount = $("#contact_input_message").val().length; // counts input
+console.log(charCount);
+// START UP ########
+// validates if char number is exactly zero
+if (charCount === 0){
+  console.log("User has exactly 0 chars.");
+}
+// validate char length is inferior to char min
+if (charCount < charLimitMin){
+  $("#contact_input_button").hide(); // hides the submition button
+  $("#char_limit").css("color","var(--color-error)"); // gets error color on limit
+  // required logs
+  console.log("Char min req not met");
+}
+// generate default char length print
+$("#char_limit").text(defaultOut);
+// on keyUp
+$("#contact_input_message").on("keyup", function(){
+  // validates if char number is exactly ten
+  if (charCount === 10){
+    console.log("User has exactly 10 chars.");
+  }
+  // recounts char length on keyup
+  charCount = $("#contact_input_message").val().length;
+  // refills container with right string
+  var out = charCount + "/" + charLimitMax + "characters" ;
+  $("#char_limit").text(out);
+  // validate char length with min and max values as reference
+  if (charCount > charLimitMax || charCount < charLimitMin){
+    $("#char_limit").css("color","var(--color-error)"); // css change using root variables.
+    $("#contact_input_button").hide(); // hides the submition button
+    // required logs
+    console.log("Char min or max req not met");
+  }
+  else{
+    // during this flow the user can submit. conditions met
+    $("#char_limit").css("color","var(--color-01)");
+    $("#contact_input_button").show(); //displays the submition button
+    // required logs
+    console.log("Can submit. conditions met");
+  }
+  $("#char_limit").text(out);
 });
+
+
+
 // #############################################################################
 });

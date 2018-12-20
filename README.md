@@ -6,6 +6,13 @@ Soon.
 
 ### Changelog
 
+#### v0.14 > Commit for exercise 2.8 > char counting on click
+- Add character counter on contact form at the bottom.
+- Increase message box validation with javascript.
+- Hide `'#contact_input_button'` if conditions are not met.
+- Alert user with visuals if conditions are not met.
+- Log detailed java output to the console.
+
 #### v0.13 > Fix top margins
 - Fix top margins on mobile.
 
