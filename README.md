@@ -6,6 +6,12 @@ Soon.
 
 ### Changelog
 
+#### v0.17 > Commit for exercise 2.11 > Google API & Documentation
+- Add google API with both methods, iFrame & Javascript.
+- Enable zoom and customisation over javascript method to use API.
+- Integrate hover listener on map containers.
+- Display information when mouse is over map containers.
+
 #### v0.16 > Commit for exercise 2.10 > Object literals
 - Convert multidimensional array for portfolio items into object.
 - Adapt portfolio table generator to the new object instead of array.

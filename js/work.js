@@ -64,15 +64,6 @@ var portfolioObjArray = [
     caption: "Default work description for dummy 12"
   }
 ];
-// GOOGLE MAPS HANDLER
-// var map = google.maps.Map($("#Gmaps"),{
-//   center:
-//   {
-//     lat: -34.397,
-//     lng: 150.644
-//   },
-//   zoom: 8
-// });
 // SIMPLY EXECUTE    ###########################################################
 // gen portfolio
 genPortfolio();
@@ -98,10 +89,109 @@ $(document).ready(function(){
     clearTimeout(timeoutIN);
     startTimeout(context, 2);
   });
+  // listener .clickDummy
+  $(".clickDummy").hover(function(){
+    // hover in
+    // simple output for listener
+    $("p", this).show();
+  }, function(){
+    // hover out
+    $("p", this).hide();
+  });
   //logs the loading time of the website after all doc ready stuff
   console.log(loadingTime(loadTimerStart,2));
 });
 // FUNCTIONS AREA ##############################################################
+// Google Maps API function
+function initMap(){
+  // vars
+  // sielwall crossing. the best place in the world 53.072958, 8.823245
+  var location = {lat: 53.072958, lng: 8.823245};
+  // map handler
+  var map = new google.maps.Map(document.getElementById('Gmaps'), {
+      center: location,
+      zoom: 15, // zoom
+      // style obj array
+      styles: [
+              {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+              {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+              {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+              {
+                featureType: 'administrative.locality',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#01A382'}]
+              },
+              {
+                featureType: 'poi',
+                stylers: [{visibility: 'off'}] //hides poi
+              },
+              {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#5e7a75'}]
+              },
+              {
+                featureType: 'road',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#5e7a75'}]
+              },
+              {
+                featureType: 'road',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#5e7a75'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#5e7a75'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+              },
+              {
+                featureType: 'transit',
+                elementType: 'geometry',
+                stylers: [{color: '#2f3948'}]
+              },
+              {
+                featureType: 'transit.station',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#01A382'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#17263c'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#515c6d'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#17263c'}]
+              }
+            ]
+  });
+  // marker handler
+  var myPlace = new google.maps.Marker({
+    position: location,
+    map: map,
+    title: "This is me",
+
+  });
+  // log
+  console.log("map loaded");
+}
 // get loading time for website
 function loadingTime(start, phase){
   var timeNow = Date.now();
