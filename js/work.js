@@ -1,3 +1,5 @@
+// WEBSITE METRICS
+var loadTimerStart = Date.now();
 // PORTFOLIO HANDLER #########################################################
 // portfolio object array
 var portfolioObjArray = [
@@ -62,28 +64,61 @@ var portfolioObjArray = [
     caption: "Default work description for dummy 12"
   }
 ];
-// EXECUTE
+// GOOGLE MAPS HANDLER
+// var map = google.maps.Map($("#Gmaps"),{
+//   center:
+//   {
+//     lat: -34.397,
+//     lng: 150.644
+//   },
+//   zoom: 8
+// });
+// SIMPLY EXECUTE    ###########################################################
 // gen portfolio
 genPortfolio();
-// PORTFOLIO OVERLAY         #########################################################
-var timeoutIN;
-var timeoutOUT;
-// listener portfolio div
-$(".open_portfolio_preview").on('click', function(){
-  genPortPreview($(this).data("portfolio"));
+// ON DOCUMENT READY ###########################################################
+$(document).ready(function(){
+  //logs the loading time of the website on doc ready
+  console.log(loadingTime(loadTimerStart,1));
+  // PORTFOLIO OVERLAY         ##############################################################################
+  var timeoutIN;
+  var timeoutOUT;
+  // listener portfolio div
+  $(".open_portfolio_preview").on('click', function(){
+    genPortPreview($(this).data("portfolio"));
+  });
+  // listener :hover overlay
+  $(".portfolio_overlay").hover(function(){
+    // in
+    var context = $(this);
+    startTimeout(context, 1);
+  }, function (){
+    // out
+    var context = $(this);
+    clearTimeout(timeoutIN);
+    startTimeout(context, 2);
+  });
+  //logs the loading time of the website after all doc ready stuff
+  console.log(loadingTime(loadTimerStart,2));
 });
-// listener :hover overlay
-$(".portfolio_overlay").hover(function(){
-  // in
-  var context = $(this);
-  startTimeout(context, 1);
-}, function (){
-  // out
-  var context = $(this);
-  clearTimeout(timeoutIN);
-  startTimeout(context, 2);
-});
-// FUNCTIONS
+// FUNCTIONS AREA ##############################################################
+// get loading time for website
+function loadingTime(start, phase){
+  var timeNow = Date.now();
+  var total = timeNow - start;
+  // defines which phase of the timer
+  switch (phase) {
+    case 1:
+      var out = "Doc ready in "+ total + "ms.";
+      break;
+    case 2:
+      var out = "Website fully loaded in "+ total + "ms.";
+      break;
+    default:
+      console.log("Switch error on loading timer script");
+  }
+  return out;
+}
 // generate portfolio modal preview
 function genPortPreview(id){
   // set title
@@ -143,3 +178,4 @@ function fadeOverlay(context, bool){
     context.fadeTo(750, 0.0, "swing", function(){});
   }
 }
+//

@@ -609,3 +609,6 @@ a:hover{
   min-height:100vh;
   /* background-color: blue; */
 }
+#dummy .header{
+  margin-top: 12.5vh;
+}
