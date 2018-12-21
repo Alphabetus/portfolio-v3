@@ -1024,28 +1024,24 @@ START OF DUMMY CONTAINER
       <!-- /row 1 -->
 
       <!-- row 2 -->
-      <div class="row">
+      <div class="row justify-content-center">
 
         <!-- col 1 -->
-        <div class="col-12 col-sm-6">
-          <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZO9e1b0qTZdq4t5HIa9PKE0Y4ExTBmp0&callback=initMap"
-    async defer></script>
+        <div class="map_col col-12 col-sm-6 embed-responsive clickDummy">
+          <iframe
+            class="embed-responsive-item mx-auto"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCZO9e1b0qTZdq4t5HIa9PKE0Y4ExTBmp0
+              &q=Space+Needle,Seattle+WA" allowfullscreen>
+              Your device does not support Iframes.
+          </iframe>
+          <p>Google API with iFrame</p>
         </div>
         <!-- /col 1 -->
 
         <!-- col 2 -->
-        <div class="col-12 col-sm-6">
-          B
+        <div class="map_col col-12 col-sm-6 mt-3 mt-sm-0 clickDummy">
+          <div id="Gmaps"></div>
+          <p>Google API with JS<br>(so much freedom)</p>
         </div>
         <!-- /col 2 -->
 
