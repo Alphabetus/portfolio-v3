@@ -6,6 +6,12 @@ Soon.
 
 ### Changelog
 
+#### v0.16 > Commit for exercise 2.10 > Object literals
+- Convert multidimensional array for portfolio items into object.
+- Adapt portfolio table generator to the new object instead of array.
+- Enable full screen modal to preview images on a bigger size after click.
+- Adapt unique modal ID to full screen preview scenario.
+
 #### v0.15 > Adjust timers on hover effects
 - Adjust timer mechanics to avoid accidental opening of the overlay.
 - Cancel timer when mouse leaves.
