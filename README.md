@@ -2,7 +2,7 @@
 ## Bootstrap, css, html, jquery and jscript
 
 ### Live demo
-Soon.
+https://gomes.netlify.com/
 
 ### Changelog
 
