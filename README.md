@@ -6,6 +6,15 @@ Soon.
 
 ### Changelog
 
+#### v0.18 > Commit for exercise 2.12 > Deliver interactive website - Production state
+- Fix hover timers within portfolio thumbnail containers.
+- Cancel hover effects if not hovered for longer than 350ms.
+- Add media query to hide local nav on landing screen if screen size is under 600px.
+- Establish frontend production state for buttons and actions.
+- Add customised carrousel to display portfolio previews.
+- Establish boundaries on carrousel navigation.
+- Animate carrousel navigation between items.
+
 #### v0.17 > Commit for exercise 2.11 > Google API & Documentation
 - Add google API with both methods, iFrame & Javascript.
 - Enable zoom and customisation over javascript method to use API.

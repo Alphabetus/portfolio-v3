@@ -56,25 +56,14 @@ $("#query_btn_submit-3").on('click',function(){
   quoteSubmit(3);
 });
 
-function quoteSubmit(form){
-  var email = $("#input_email-" + form).val();
-  $("#input_email-" + form).attr("placeholder", "Check your inbox");
-  $("#input_email-" + form).val("");
-  $(".query_ok").text("Email sent to " + email);
-};
-
 // EXERCISE 2.8        #########################################################
 // initialize counter & vars
-var charLimitMax = 50; // defines the maximum amount of chars
+var charLimitMax = 500; // defines the maximum amount of chars
 var charLimitMin = 5; // defines minimum amount of chars
 var defaultOut = "0/" + charLimitMax + " characters"; // prints default output
 var charCount = $("#contact_input_message").val().length; // counts input
 console.log(charCount);
 // START UP ########
-// validates if char number is exactly zero
-if (charCount === 0){
-  console.log("User has exactly 0 chars.");
-}
 // validate char length is inferior to char min
 if (charCount < charLimitMin){
   $("#contact_input_button").hide(); // hides the submition button
@@ -100,19 +89,55 @@ $("#contact_input_message").on("keyup", function(){
     $("#char_limit").css("color","var(--color-error)"); // css change using root variables.
     $("#contact_input_button").hide(); // hides the submition button
     // required logs
-    console.log("Char min or max req not met");
+    // console.log("Char min or max req not met");
   }
   else{
     // during this flow the user can submit. conditions met
     $("#char_limit").css("color","var(--color-01)");
     $("#contact_input_button").show(); //displays the submition button
     // required logs
-    console.log("Can submit. conditions met");
+    // console.log("Can submit. conditions met");
   }
   $("#char_limit").text(out);
 });
 
-
-
-// #############################################################################
+// CONTACT SEND BUTTON LISTENER
+$("#contact_input_button").on("click", function(){
+  // data handler var
+  handleContactData();
 });
+
+});
+// FUNCTIONS  #############################################################################
+function handleContactData(){
+  // assign data to vars
+  var mail = $("#contact_input_email").val();
+  var name = $("#contact_input_name").val();
+  var phone = $("#contact_input_phone").val();
+  var message = $("#contact_input_message").val();
+  // validate form inputs all together according to html 5 given rules *.*
+  $("form", "#contact").submit(function(e){
+    e.preventDefault();
+    // execute submition
+    //
+    // handle post data and send the email with php
+    //
+    // change displays
+    $("form","#contact").hide();
+    $(".form_output").show();
+  });
+}
+function quoteSubmit(form){
+  // validate input
+  // console.log($("#quote_form-"+form));
+  $("#quote_form-"+form).submit(function(e){
+    e.preventDefault();
+    // execute
+    var email = $("#input_email-" + form).val();
+    $("#input_email-" + form).attr("placeholder", "Check your inbox. Thanks");
+    $("#input_email-" + form).val("");
+    $("#query_btn_submit-" + form).hide();
+    console.log(form);
+  });
+
+};

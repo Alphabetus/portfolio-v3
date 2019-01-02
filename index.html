@@ -84,10 +84,13 @@
           <a class="nav-item nav-link" href="#body_services">Services</a>
 
           <!-- item 3 -->
-          <a class="nav-item nav-link" href="#body_contact">Contact</a>
+          <a class="nav-item nav-link" href="#body_portfolio">Background</a>
 
           <!-- item 4 -->
-          <a class="nav-item nav-link" href="#dummy">Dummy</a>
+          <a class="nav-item nav-link" href="#body_contact">Contact</a>
+
+          <!-- item 5 -->
+          <a class="nav-item nav-link" href="#body_location">Office</a>
 
         </div>
         <!-- /items -->
@@ -213,7 +216,7 @@ BIG SCREEN DISPLAY LANDING
                 <div class="col-10 text-center">
 
                   <!-- form > quote_form -->
-                  <form id="quote_form">
+                  <form id="quote_form-1">
                     <div class="form-group">
                       <!-- form row 1 -->
                       <div class="row form_row">
@@ -226,7 +229,8 @@ BIG SCREEN DISPLAY LANDING
                             data-toggle="tooltip"
                             data-placement="top"
                             title="<span class='dark_text'>Insert your email here and press the button get quote and get an estimate price on your new website!</span>"
-                            placeholder="Insert your email"/>
+                            placeholder="Insert your email"
+                            required/>
                         </div>
                         <!-- /col 1 -->
                       </div>
@@ -235,12 +239,14 @@ BIG SCREEN DISPLAY LANDING
                       <div class="row form_row">
                         <!-- col 1 -->
                         <div class="col">
-                          <a
-                            href="#"
+                          <!-- submit button -->
+                          <button
+                            type="submit"
                             id="query_btn_submit-1"
                             class="btn btn-info btn-lg">
                             <span class="query_ok">get quote</span>
-                          </a>
+                          </button>
+                          <!-- /submit button -->
                         </div>
                         <!-- /col 1 -->
                       </div>
@@ -332,7 +338,7 @@ BIG SCREEN DISPLAY LANDING
                 <div class="col-10 text-center">
 
                   <!-- form > quote_form -->
-                  <form id="quote_form">
+                  <form id="quote_form-2">
                     <div class="form-group">
                       <!-- form row 1 -->
                       <div class="row form_row">
@@ -345,7 +351,8 @@ BIG SCREEN DISPLAY LANDING
                             data-toggle="tooltip"
                             data-placement="top"
                             title="<span class='dark_text'>Insert your email here and press the button get quote and get an estimate price on your new website!</span>"
-                            placeholder="Insert your email"/>
+                            placeholder="Insert your email"
+                            required/>
                         </div>
                         <!-- /col 1 -->
                       </div>
@@ -354,12 +361,14 @@ BIG SCREEN DISPLAY LANDING
                       <div class="row form_row">
                         <!-- col 1 -->
                         <div class="col">
-                          <a
-                            href="#"
+                          <!-- submit button -->
+                          <button
+                            type="submit"
                             id="query_btn_submit-2"
                             class="btn btn-info btn-lg">
                             <span class="query_ok">get quote</span>
-                          </a>
+                          </button>
+                          <!-- /submit button -->
                         </div>
                         <!-- /col 1 -->
                       </div>
@@ -448,7 +457,7 @@ BIG SCREEN DISPLAY LANDING
               <!-- /intro text -->
 
               <!-- form -->
-              <form class="" id="quote_form">
+              <form method="POST" id="quote_form-3">
 
                 <!-- form group -->
                 <div class="form-group">
@@ -456,17 +465,18 @@ BIG SCREEN DISPLAY LANDING
                     type="email"
                     id="input_email-3"
                     class="form-control form-control-sm input_email"
-                    placeholder="insert your email"/>
+                    placeholder="insert your email"
+                    required/>
                 </div>
                 <!-- /form group -->
 
                 <!-- submit button -->
-                <a
-                  href="#"
+                <button
+                  type="submit"
                   id="query_btn_submit-3"
                   class="btn btn-info btn-lg">
                   <span class="query_ok">get quote</span>
-                </a>
+                </button>
                 <!-- /submit button -->
 
               </form>
@@ -491,7 +501,7 @@ BIG SCREEN DISPLAY LANDING
         <!-- LOCAL NAV ###################################################### -->
         <div class="row local_nav_row local_nav_row_absolute local_nav_row_z local_nav justify-content-center">
           <!-- col 1 -->
-          <div class="local_nav col-12 text-center smoothClass">
+          <div class="local_nav local_nav_top col-12 text-center smoothClass">
             <a href="#body_services" class="local_nav_link">
               <i class="local_nav_icon fas fa-angle-double-down"></i>
             </a>
@@ -650,7 +660,26 @@ Content of this div is generated by javascript on works.js
 
             <!-- modal content -->
             <div class="modal-body">
-              <!-- <embed id="modal-embed" src="files/sample-link_1.pdf"> -->
+              <div class="row preview_controls">
+                <div class="col-6 text-left">
+                  <a
+                    href="#"
+                    class="preview_nav_button"
+                    data-direction="left"
+                    >
+                    <i class="fas fa-caret-left"></i>
+                  </a>
+                </div>
+                <div class="col-6 text-right">
+                  <a
+                    href="#"
+                    class="preview_nav_button"
+                    data-direction="right"
+                    >
+                  <i class="fas fa-caret-right"></i>
+                  </a>
+                </div>
+              </div>
               <div class="modal-caption blockquote-footer">
                 <!-- filled by genPortPreview() on work.js -->
               </div>
@@ -660,6 +689,32 @@ Content of this div is generated by javascript on works.js
         </div>
       </div>
       <!-- /modal preview portfolio -->
+      <!-- LOCAL NAV ###################################################### -->
+      <!-- LOCAL NAV > BELOW MD -->
+      <div class="row local_nav_row local_nav justify-content-center d-block d-md-none">
+
+        <!-- col 1 -->
+        <div class="local_nav col-12 text-center smoothClass">
+          <a href="#body_contact" class="local_nav_link">
+            <i class="local_nav_icon fas fa-angle-double-down mb-2"></i>
+          </a>
+        </div>
+        <!-- /col 1 -->
+
+      </div>
+      <!-- LOCAL NAV > Over MD -->
+      <div class="row local_nav_row local_nav_row_absolute local_nav justify-content-center d-none d-md-block">
+
+        <!-- col 1 -->
+        <div class="local_nav col-12 text-center smoothClass">
+          <a href="#body_contact" class="local_nav_link">
+            <i class="local_nav_icon fas fa-angle-double-down"></i>
+          </a>
+        </div>
+        <!-- /col 1 -->
+
+      </div>
+      <!-- /LOCAL NAV ###################################################### -->
     </section>
 
     <!-- /portfolio area ####### ####### ####### ####### ####### ####### ##### -->
@@ -841,8 +896,23 @@ Content of this div is generated by javascript on works.js
         <!-- col 1 -->
         <div id="contact" class="col-12 col-md-6 mt-4 mt-md-auto">
 
+          <!-- form output -->
+          <div class="row justify-content-center">
+            <div class="col-12 form_output p-3">
+              <!-- content hidden and displayed by scripts.js -->
+              <p>
+                Thank you very much for your contact!
+                <br>
+                I'll reach you as soon as possible with a reply.
+                <br>
+                As an alternative, feel free to grab my phone number and give me a call.
+              </p>
+            </div>
+          </div>
+          <!-- /form output -->
+
           <!-- form -->
-          <form method="POST">
+          <form method="POST" action="#body_contact">
 
             <!-- row 1 -->
             <div class="row justify-content-center mt-2">
@@ -850,14 +920,15 @@ Content of this div is generated by javascript on works.js
               <!-- col 1 > name -->
               <div class="col-12 col-sm-6">
                 <div class="form-group">
-                  <label for="contact_input_email">Name *</label>
+                  <label for="contact_input_name">Name *</label>
                   <input
                     name="post_name"
                     id="contact_input_name"
                     class="form-control"
                     type="text"
                     placeholder="your name"
-                    title="Enter your name"/>
+                    title="Enter your name"
+                    required/>
                 </div>
               </div>
               <!-- /col 1 -->
@@ -871,7 +942,7 @@ Content of this div is generated by javascript on works.js
                     id="contact_input_phone"
                     class="form-control"
                     type="tel"
-                    pattern="[0-9]{5,15}*$"
+                    pattern="[0-9]{5,15}"
                     placeholder="your phone number"
                     title="Format example: 0049 xxxxxxxxxxx."
                     >
@@ -918,7 +989,7 @@ Content of this div is generated by javascript on works.js
                     cols="40"
                     rows="5"
                     placeholder="your message"
-                    maxlength="55"
+                    maxlength="505"
                     minlength="5"
                     ></textarea>
                     <!-- inner row -->
@@ -982,7 +1053,7 @@ Content of this div is generated by javascript on works.js
 
         <!-- col 1 -->
         <div class="local_nav col-12 text-center smoothClass">
-          <a href="#dummy" class="local_nav_link">
+          <a href="#body_location" class="local_nav_link">
             <i class="local_nav_icon fas fa-angle-double-down"></i>
           </a>
         </div>
@@ -993,7 +1064,7 @@ Content of this div is generated by javascript on works.js
       <div class="row local_nav_row local_nav_row_absolute local_nav justify-content-center d-none d-md-block">
         <!-- col 1 -->
         <div class="local_nav col-12 text-center smoothClass">
-          <a href="#dummy" class="local_nav_link">
+          <a href="#body_location" class="local_nav_link">
             <i class="local_nav_icon fas fa-angle-double-down"></i>
           </a>
         </div>
@@ -1013,35 +1084,25 @@ START OF DUMMY CONTAINER
 
     <!-- dummy section to simulate next section -->
 
-    <section id="dummy" class="container-fluid">
+    <section id="body_location" class="container-fluid">
 
-      <!-- row 1 -->
-      <div class="row">
-        <div class="header col-12 text-center text-md-left pl-0 pl-sm-5">
-          <h1>Dummy Map</h1>
+      <!-- header -->
+      <div class="row header justify-content-end">
+        <div class="col-12 text-center text-md-left pl-0 pl-sm-5">
+          <h1>Office</h1>
         </div>
       </div>
-      <!-- /row 1 -->
+      <!-- /header -->
 
       <!-- row 2 -->
       <div class="row justify-content-center">
 
-        <!-- col 1 -->
-        <div class="map_col col-12 col-sm-6 embed-responsive clickDummy">
-          <iframe
-            class="embed-responsive-item mx-auto"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCZO9e1b0qTZdq4t5HIa9PKE0Y4ExTBmp0
-              &q=Space+Needle,Seattle+WA" allowfullscreen>
-              Your device does not support Iframes.
-          </iframe>
-          <p>Google API with iFrame</p>
-        </div>
-        <!-- /col 1 -->
-
         <!-- col 2 -->
-        <div class="map_col col-12 col-sm-6 mt-3 mt-sm-0 clickDummy">
+        <div class="map_col col-12 col-sm-12 clickDummy">
           <div id="Gmaps"></div>
-          <p>Google API with JS<br>(so much freedom)</p>
+          <p>
+            I'm based in the Viertel area and available to meet you anywhere near Bremen
+          </p>
         </div>
         <!-- /col 2 -->
 

@@ -71,23 +71,43 @@ genPortfolio();
 $(document).ready(function(){
   //logs the loading time of the website on doc ready
   console.log(loadingTime(loadTimerStart,1));
+  // initialize preview index
+  var activePreviewIndex = null;
   // PORTFOLIO OVERLAY         ##############################################################################
   var timeoutIN;
   var timeoutOUT;
+  // listener portfolio nav
+  $(".preview_nav_button").on("click", function(){
+    $("img", "#modal_portfolio_preview").css("opacity", 0);
+    switch($(this).data("direction")){
+      case "left":
+        genPortPreview(--activePreviewIndex);
+        break;
+      case "right":
+        genPortPreview(++activePreviewIndex);
+        break;
+      default:
+        console.log("error on switch");
+    }
+  });
   // listener portfolio div
   $(".open_portfolio_preview").on('click', function(){
+    $("img", "#modal_portfolio_preview").css("opacity", 0);
     genPortPreview($(this).data("portfolio"));
+    activePreviewIndex = $(this).data("portfolio");
   });
   // listener :hover overlay
   $(".portfolio_overlay").hover(function(){
     // in
     var context = $(this);
     startTimeout(context, 1);
+    console.log("in");
   }, function (){
     // out
     var context = $(this);
     clearTimeout(timeoutIN);
     startTimeout(context, 2);
+    console.log("out");
   });
   // listener .clickDummy
   $(".clickDummy").hover(function(){
@@ -211,6 +231,24 @@ function loadingTime(start, phase){
 }
 // generate portfolio modal preview
 function genPortPreview(id){
+  var limit = eval(portfolioObjArray.length - 1);
+  // design navigation according to index
+  if (id < 1){
+    // no left preview
+    $("[data-direction='left']").hide();
+  }
+  else{
+    // left preview exists
+    $("[data-direction='left']").show();
+  }
+  if (id >= limit){
+    // no right preview
+    $("[data-direction='right']").hide();
+  }
+  else{
+    // right preview exists
+    $("[data-direction='right']").show();
+  }
   // set title
   $(".modal-title", "#modal_portfolio_preview").text(portfolioObjArray[id].title);
   // set caption text
@@ -219,6 +257,13 @@ function genPortPreview(id){
   $("img", "#modal_portfolio_preview").attr("src", portfolioObjArray[id].pic);
   // display modal
   $('#modal_portfolio_preview').modal();
+  // animate fade in
+  $("img", "#modal_portfolio_preview").animate({
+    opacity: 1
+  }, 275, function(){
+    //complete
+  });
+
 }
 // generate portfolio content images
 function genPortfolio(){
@@ -248,12 +293,19 @@ function genPortfolio(){
 };
 // handle timeout start.
 function startTimeout(context, timer){
+  var currentOpacity = context.css("opacity");
+  // console.log("OPA: " + currentOpacity);
   switch (timer){
     case 1:
       timeoutIN = setTimeout(function (){fadeOverlay(context, true)} , 350);
       break;
     case 2:
-      timeoutOUT = setTimeout(function (){fadeOverlay(context, false)} , 350);
+      if (currentOpacity > 0){
+        timeoutOUT = setTimeout(function (){fadeOverlay(context, false)} , 350);
+      }
+      else{
+        clearTimeout(timeoutIN);
+      }
       break;
   }
 }
@@ -264,7 +316,6 @@ function fadeOverlay(context, bool){
     context.fadeTo(750, 0.72, "swing", function(){});
   }
   else{
-    // bool false = fade OUT
     context.fadeTo(750, 0.0, "swing", function(){});
   }
 }

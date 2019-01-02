@@ -28,11 +28,19 @@
   --background-services: url("../img/background_services.jpg");
   --background-contact: url("../img/background_contact.jpg");
 }
+.local_nav_top{
+  opacity: 0;
+}
 /* MEDIA PARAMETERS
 ####################################  */
 @media (min-width: 768px) {
   .modal-button button {
     float: right;
+  }
+}
+@media (min-height: 600px){
+  .local_nav_top{
+    opacity: 1;
   }
 }
 /* GENERAL PARAMETERS
@@ -235,7 +243,7 @@ a:hover{
   border-radius: 0.355em 0 0.350em 0;
 }
 /* Overlay form content */
-#body_landing input, #body_landing a{
+#body_landing input, #body_landing button, #body_landing a{
   width: 100%;
 }
 #body_landing .input_email::-webkit-input-placeholder{
@@ -270,7 +278,7 @@ a:hover{
   background-image: var(--pattern-01);
 }
 /* Local button specifications */
-#body_landing .btn-info , #body_landing span{
+#body_landing .btn-info , #body_landing span, #body_landing button{
   font-family: var(--font-h);
   font-weight: 450;
   color: var(--color-t);
@@ -409,6 +417,7 @@ a:hover{
   content: '-';
 }
 #modal_portfolio_preview img{
+  /* opacity: 0; */
   position: absolute;
   max-width: 90%;
   max-height: 75%;
@@ -420,6 +429,24 @@ a:hover{
   border-style: solid;
   border-width: 0.11em;
   box-shadow: 0 0 2.6em rgba(0,0,0,0.38);
+}
+/* Modal Controls  */
+#modal_portfolio_preview .preview_controls{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  transform: translateY(-50%);
+  z-index: 10000000;
+}
+#modal_portfolio_preview .preview_nav_button{
+  font-size: 3em;
+  /* fx */
+  transition: var(--fx-01);
+}
+#modal_portfolio_preview .preview_nav_button:hover{
+  font-size: 2.8em;
 }
 /* CONTACT AREA HANDLER
 ####################################  */
@@ -475,6 +502,11 @@ a:hover{
 #body_contact .box{
   width: 2.3em!important;
   text-align: center;
+}
+/* Form Output Handler */
+#body_contact .form_output{
+  display: none;
+  margin: auto;
 }
 /* FOOTER DESIGN HANDLER
 ####################################  */
@@ -604,28 +636,33 @@ a:hover{
 	border: 0;
 }
 /* TEMPORARY STUFF */
-#dummy{
+#body_location{
   position: relative;
   min-height:100vh;
   /* background-color: blue; */
 }
-#dummy .header{
-  margin-top: 12.5vh;
+#body_location .header{
+  padding-top: 12.5vh;
+  color: var(--color-01);
+  background-color: var(--color-04);
 }
 #Gmaps{
   height: 100%;
   width: 100%;
+
 }
 .map_col{
   width: 100%;
   min-height: 70vh;
+  padding: 0;
+  margin: 0;
 }
-#dummy .embed-responsive-item{
+#body_location .embed-responsive-item{
   left: 50%;
   transform: translateX(-50%);
   max-width: 92vw;
 }
-#dummy p{
+#body_location p{
   display: none;
   position: absolute;
   top: 0;
