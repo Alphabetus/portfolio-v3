@@ -6,6 +6,8 @@ https://gomes.netlify.com/
 
 ### Changelog
 
+#### v1.0 > Dynamic frontend release
+
 #### v0.18 > Commit for exercise 2.12 > Deliver interactive website - Production state
 - Fix hover timers within portfolio thumbnail containers.
 - Cancel hover effects if not hovered for longer than 350ms.
